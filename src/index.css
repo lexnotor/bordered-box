@@ -3,19 +3,45 @@
 @tailwind utilities;
 
 body {
-  @apply bg-slate-900 flex justify-center items-center min-h-screen;
+  @apply bg-[#1c1917] flex justify-center items-center min-h-screen;
+}
+
+.absolute-center {
+  @apply absolute top-1/2 left-1/2;
 }
 
 .rot {
   animation: infinite 5s rotat linear;
-  transform-origin: center;
+}
+
+.rot-one {
+  animation: infinite 5s rotateone linear;
 }
 
 @keyframes rotat {
   0% {
     transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    @apply border-t-fuchsia-300 border-b-orange-900;
+  }
+  50% {
+    @apply border-t-fuchsia-900 border-b-orange-400;
   }
   100% {
     transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    @apply border-t-fuchsia-300 border-b-orange-900;
+  }
+}
+
+@keyframes rotateone {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+    @apply border-l-sky-300 border-r-lime-900;
+  }
+  50% {
+    @apply border-l-sky-900 border-r-lime-400;
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+    @apply border-l-sky-300 border-r-lime-900;
   }
 }
