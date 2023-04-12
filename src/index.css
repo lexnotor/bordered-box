@@ -7,7 +7,7 @@ body {
 }
 
 .rot {
-  animation: infinite 0.2s rotat linear;
+  animation: infinite 5s rotat linear;
   transform-origin: center;
 }
 
