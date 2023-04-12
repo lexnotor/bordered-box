@@ -2,7 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-border {
-  text-shadow: -1px 0px black, 1px 0px black, 0px 1px black, 0px -1px black;
-  color: white;
+body {
+  @apply bg-slate-900;
+}
+
+.rot {
+  animation: infinite 0.2s rotat linear;
+  transform-origin: center;
+}
+
+@keyframes rotat {
+  0% {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
 }
